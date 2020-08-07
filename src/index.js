@@ -1,11 +1,20 @@
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
+import './normalize.css';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import GlobalBaseStyles from './globalStyles/base.styled.js';
+import GlobalFontStyles from './globalStyles/fonts.styled.js';
 
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalBaseStyles />
+    <GlobalFontStyles />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
