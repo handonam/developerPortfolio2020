@@ -52,6 +52,7 @@ export const ProjectHeading = styled.div`
   @media (min-width: 480px) {
     padding-left: calc(50vw - var(--data-center-width) / 2 - 30px);
   }
+  position: relative;
 `;
 
 export const ProjectTitle = styled.h1`
@@ -61,11 +62,15 @@ export const ProjectTitle = styled.h1`
   color: ${COLORS.GRAY6};
   ${SHADOWS.TEXTSHADOW1};
   display: block;
+  margin-bottom: 0.5rem;
+  
   @media (min-width: 480px) {
     font-size: 3rem;
+    margin-bottom: 1rem;
   }
   @media (min-width: 768px) {
     font-size: 4rem;
+    margin-bottom: 1.5rem;
   }
 `;
 
@@ -74,6 +79,7 @@ export const ProjectImageCarousel = styled(Carousel)`
       position: absolute;
       left: calc(50% - var(--data-center-width)/2);
       top: calc(50% - var(--data-center-width)/2);
+      ${SHADOWS.BOXSHADOW1};
     `
   };
 
@@ -141,6 +147,25 @@ export const ProjectTime = styled.div`
 `;
 
 export const ViewProjectLink = styled(Link)`
-  color: ${COLORS.BRAND_PRIMARY};
-  dislay: block;
+  color: ${COLORS.GRAY6};
+  text-decoration: none;
+  ${SHADOWS.TEXTSHADOW1}
+  
+  padding: 1rem;
+  display: inline-block;
+  &:hover {
+    text-decoration: underline;
+    padding-left: 1.75rem;
+    background-color: ${COLORS.BRAND_PRIMARY};
+    transition: all .35s ease-in-out;
+  }
+  
+  font-size: 1rem;
+  @media (min-width: 480px) {
+    font-size: 1.5rem;
+    margin-left: 3rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 `

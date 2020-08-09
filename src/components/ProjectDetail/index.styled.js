@@ -45,7 +45,7 @@ export const ImageContainer = styled.div.attrs({
 `;
 
 export const ProjectImage = styled.img`
-  ${SHADOWS.DROPSHADOW1}
+  ${SHADOWS.BOXSHADOW1}
   width: 100%;
   max-width: 480px;
   margin-left: auto;

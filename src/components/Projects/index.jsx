@@ -89,8 +89,8 @@ const Projects = () => {
               {
                 ProjectData.map((prjct, key) => (
                   <ProjectHeading>
-                  <ProjectTitle>{prjct.name}</ProjectTitle>
-                  <ViewProjectLink to={`/project/${prjct.slugname}`}>View this project ></ViewProjectLink>
+                    <ProjectTitle>{prjct.name}</ProjectTitle>
+                    <ViewProjectLink to={`/project/${prjct.slugname}`}>View this project ></ViewProjectLink>
                   </ProjectHeading>
                 )
               )}

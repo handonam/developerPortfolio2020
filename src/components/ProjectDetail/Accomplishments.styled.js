@@ -78,7 +78,7 @@ export const TaskImageContainer = styled.div`
 `;
 
 export const TaskImage = styled.img`
-  ${SHADOWS.DROPSHADOW1}
+  ${SHADOWS.BOXSHADOW1}
   
   width: 100%;
   max-width: 480px;

@@ -14,6 +14,10 @@ export const MenuButtonContainer = styled.button`
   color: ${COLORS.GRAY5};
   
   @media (min-width: 768px) {
+    bottom: initial;
+    top: 0;
+  }
+  @media (min-width: 1440px) {
     left: 0;
     bottom: initial;
     top: 2rem;

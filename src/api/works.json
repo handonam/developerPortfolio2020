@@ -106,7 +106,7 @@
     "slugname": "pocketspace",
     "statusId": 2,
     "url": "https://pocketspace.co",
-    "description": "A social product-recommendation app that lets experts promote products they love and recommend.  Currently in closed-beta.",
+    "description": "A social product-recommendation app that lets experts promote products they love and recommend.  Currently offline.",
     "bgUrl": "/images/components/projects/works__bg--pocketspace.jpg",
     "accomplishments": [
       {
