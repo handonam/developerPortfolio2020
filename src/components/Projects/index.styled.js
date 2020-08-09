@@ -11,6 +11,8 @@ export const ProjectsContainer = styled.div`
   justify-content: space-around;
   background-color: ${COLORS.GRAY3};
   min-height: 100vh;
+  height: calc(10rem + var(--data-center-width));
+  padding-bottom: 10rem;
   position: relative;
   overflow-x: hidden;
   &:before {
@@ -60,17 +62,17 @@ export const ProjectTitle = styled.h1`
   font-style: italic;
   font-size: 2rem;
   color: ${COLORS.GRAY6};
-  ${SHADOWS.TEXTSHADOW1};
+  ${SHADOWS.TEXTSHADOW2};
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   
   @media (min-width: 480px) {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
   }
   @media (min-width: 768px) {
     font-size: 4rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: .75rem;
   }
 `;
 
@@ -149,7 +151,7 @@ export const ProjectTime = styled.div`
 export const ViewProjectLink = styled(Link)`
   color: ${COLORS.GRAY6};
   text-decoration: none;
-  ${SHADOWS.TEXTSHADOW1}
+  ${SHADOWS.TEXTSHADOW2}
   
   padding: 1rem;
   display: inline-block;

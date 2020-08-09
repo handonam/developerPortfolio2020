@@ -11,7 +11,12 @@ export const MenuButtonContainer = styled.button`
   background-color: ${COLORS.BRAND_PRIMARY};
   border: none;
   outline: none;
-  color: ${COLORS.GRAY5};
+  color: ${COLORS.GRAY6};
+  cursor: pointer;
+  &:hover {
+    color: ${COLORS.WHITE};
+    text-decoration: underline;
+  }
   
   @media (min-width: 768px) {
     bottom: initial;

@@ -27,7 +27,7 @@ export const MenuList = styled.ul`
   list-style: none;
   font-size: 2rem;
   font-family: Libre Franklin;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1;
   padding-bottom: 5rem;
   transform: translate3d(0, ${(props) => !props.active ? '-120px' : 0}, 0);

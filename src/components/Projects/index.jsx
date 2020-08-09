@@ -42,12 +42,12 @@ const Projects = () => {
       {/* We also store the window size as another context to be used by child components */}
       <WindowSizeContext.Consumer>
       {context => (
-        <ProjectsContainer>
-          <ProjectList style={{
-            // see styled-component to see why this is being set.
-            '--data-side-width': `${context.windowSize.width * slideSize.sides}px`,
-            '--data-center-width': `${context.windowSize.width * slideSize.center}px`
-          }}>
+        <ProjectsContainer style={{
+          // see styled-component to see why this is being set.
+          '--data-side-width': `${context.windowSize.width * slideSize.sides}px`,
+          '--data-center-width': `${context.windowSize.width * slideSize.center}px`
+        }}>
+          <ProjectList>
             <ProjectImageCarouselButton 
               position={'left'}
               onClick={() => setActiveSlide(activeSlide - 1)} disabled={activeSlide <= 0}>
