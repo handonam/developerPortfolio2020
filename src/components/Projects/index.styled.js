@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import {COLORS, SHADOWS} from '../../shared/colors.js'
 import Carousel from "./Carousel.jsx";
+import {
+  Link
+} from 'react-router-dom';
 
 export const ProjectsContainer = styled.div`
   display: flex;
@@ -21,8 +24,7 @@ export const ProjectsContainer = styled.div`
     background-color: rgba(0, 0, 0, .60);
   }
 `;
-export const ProjectList = styled.ul`
-  list-style: none;
+export const ProjectList = styled.div`
   height: 100%;
   margin: 0;
   padding: 0;
@@ -68,46 +70,50 @@ export const ProjectTitle = styled.h1`
 `;
 
 export const ProjectImageCarousel = styled(Carousel)`
-  /**
-   * I have to use CSS variables here because i can't set set inline styles
-   * on an inherited component that also has its own inline styles
-   *
-   * (In other words, I can't do styled(Carousel).attrs() again)
-   */
-  ${(props) => {
-    switch(props.position) {
-      case 'left':
-        return `
-          left: calc(var(--data-side-width)/2 * -1);
-          top: calc(50% - var(--data-side-width)/2);
-          `;
-      case 'right':
-        return `
-          left: calc(100% - var(--data-side-width)/2);
-          top: calc(50% - var(--data-side-width)/2);
-          `;
-      case 'center':
-        return `
-          left: calc(50% - var(--data-center-width)/2);
-          top: calc(50% - var(--data-center-width)/2);
-          `;
-      default:
-        return 'initial';
-    }
-  }};
+  ${(props) => !props.isCenter ? '' : `
+      position: absolute;
+      left: calc(50% - var(--data-center-width)/2);
+      top: calc(50% - var(--data-center-width)/2);
+    `
+  };
 
-  position: absolute;
   z-index: 2;
 `;
 
 export const ProjectImageCarouselButton = styled.button`
+  /* Reset the button style to be see-thru */
   background-color: transparent;
   padding: 0;
   margin: 0; 
   border: none;
   outline: none;
   cursor: pointer;
-  :before{
+  
+  
+  /** Position the button !*/
+  position: absolute;
+  width: var(--data-side-width);
+  height: var(--data-side-width);
+  ${(props) => {
+    switch(props.position) {
+      case 'left':
+        return `
+          left: calc(var(--data-side-width)/2 * -1);
+          top: calc(50% - var(--data-side-width)/2);
+        `;
+      case 'right':
+        return `
+          left: calc(100% - var(--data-side-width)/2);
+          top: calc(50% - var(--data-side-width)/2);
+        `;
+      default:
+        return '';
+    }
+  }};
+  
+  
+  
+  :before {
     content: '';
     position: absolute;
     z-index: 1;
@@ -117,6 +123,15 @@ export const ProjectImageCarouselButton = styled.button`
     right: 0;
     background-image: linear-gradient(to ${props => props.direction}, rgba(0, 0, 0, .10), rgba(0, 0, 0, .60));
   }
+  :after {
+    content: '${props => props.position === 'left' ? '<' :'>'}';
+    z-index: 2;
+    color: ${COLORS.WHITE};
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    ${props => props.position === 'left' ? 'right: 10px;' : 'left: 10px;'}
+  }
   &:hover:before{
     background-image: rgba(0, 0, 0, .10);
   }
@@ -124,3 +139,8 @@ export const ProjectImageCarouselButton = styled.button`
 export const ProjectTime = styled.div`
   color: ${COLORS.GRAY6};
 `;
+
+export const ViewProjectLink = styled(Link)`
+  color: ${COLORS.BRAND_PRIMARY};
+  dislay: block;
+`

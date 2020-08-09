@@ -1,0 +1,218 @@
+/*
+* SkeletonCSS - Low-Specificity Fluid Layout, Modified by Hanam Do
+*/
+
+
+/* Table of Contents
+==================================================
+    #Base 960 Grid
+    #Tablet (Portrait)
+    #Mobile (Portrait)
+    #Mobile (Landscape)
+    #Clearing */
+
+
+/* #Base 960 Grid
+================================================== */
+
+    .s-Container             { position: relative; width:90%; max-width: 1440px; margin: 0 auto; padding: 0; }
+    .s-Column                { float: left; display: inline; margin-left: 1.041666666666667%; margin-right: 1.041666666666667%; }
+    .s-Column--Reverse       { float: right; }
+    .s-Row                   { margin-bottom: 4.166666666666667%; }
+
+    /* Nested Column Classes */
+    .s-Alpha                 { margin-left: 0; }
+    .s-Omega                 { margin-right: 0; }
+
+    /* Base Grid */
+    .s-One                   { width: 4.166666666666667%; }
+    .s-Two                   { width: 10.41666666666667%; }
+    .s-Three                 { width: 16.66666666666667%; }
+    .s-Four                  { width: 22.91666666666667%; }
+    .s-Five                  { width: 29.16666666666667%; }
+    .s-Six                   { width: 35.41666666666667%; }
+    .s-Seven                 { width: 41.66666666666667%; }
+    .s-Eight                 { width: 47.91666666666667%; }
+    .s-Nine                  { width: 54.16666666666667%; }
+    .s-Ten                   { width: 60.41666666666667%; }
+    .s-Eleven                { width: 66.66666666666667%; }
+    .s-Twelve                { width: 72.91666666666667%; }
+    .s-Thirteen              { width: 79.16666666666667%; }
+    .s-Fourteen              { width: 85.41666666666667%; }
+    .s-Fifteen               { width: 91.66666666666667%; }
+    .s-Sixteen               { width: 97.91666666666667%; }
+
+    .s-OneThird              { width: 31.25%; }
+    .s-TwoThirds             { width: 64.58333333333333%; }
+
+    /* Offsets */
+    .s-OffsetByOne           { padding-left: 6.25%; }
+    .s-OffsetByTwo           { padding-left: 12.5%; }
+    .s-OffsetByThree         { padding-left: 18.75%; }
+    .s-OffsetByFour          { padding-left: 25%; }
+    .s-OffsetByFive          { padding-left: 31.25%; }
+    .s-OffsetBySix           { padding-left: 37.5%; }
+    .s-OffsetBySeven         { padding-left: 43.75%; }
+    .s-OffsetByEight         { padding-left: 50%; }
+    .s-OffsetByNine          { padding-left: 56.25%; }
+    .s-OffsetByTen           { padding-left: 62.5%; }
+    .s-OffsetByEleven        { padding-left: 68.75%; }
+    .s-OffsetByTwelve        { padding-left: 75%; }
+    .s-OffsetByThirteen      { padding-left: 81.25%; }
+    .s-OffsetByFourteen      { padding-left: 87.5%; }
+    .s-OffsetByFifteen       { padding-left: 93.75%; }
+
+
+
+
+/* #Tablet (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 768px */
+
+
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        .s-Container               { width: 90%; }
+        .s-Column                  { margin-left:  1.302083333333333%; margin-right:  1.302083333333333%;  }
+        .s-Alpha                   { margin-left: 0; margin-right:  1.302083333333333%; }
+        .s-Omega                   { margin-right: 0; margin-left:  1.302083333333333%; }
+        .s-Alpha.s-Omega           { margin-left: 0; margin-right: 0; }
+
+        .s-One                   { width: 3.645833333333333%; }
+        .s-Two                   { width: 9.895833333333333%; }
+        .s-Three                 { width: 16.14583333333333%; }
+        .s-Four                  { width: 22.39583333333333%; }
+        .s-Five                  { width: 28.64583333333333%; }
+        .s-Six                   { width: 34.89583333333333%; }
+        .s-Seven                 { width: 41.14583333333333%; }
+        .s-Eight                 { width: 47.39583333333333%; }
+        .s-Nine                  { width: 53.64583333333333%; }
+        .s-Ten                   { width: 59.89583333333333%; }
+        .s-Eleven                { width: 66.14583333333333%; }
+        .s-Twelve                { width: 72.39583333333333%; }
+        .s-Thirteen              { width: 78.64583333333333%; }
+        .s-Fourteen              { width: 84.89583333333333%; }
+        .s-Fifteen               { width: 91.14583333333333%; }
+        .s-Sixteen               { width: 97.39583333333333%; }
+
+        .s-OneThird              { width: 30.72916666666667%; }
+        .s-TwoThirds             { width: 64.0625%; }
+    }
+
+
+/*  #Mobile (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 320px */
+
+
+    @media only screen and (max-width: 479px) {
+        .s-Container { width: 95%; }
+        .s-Column   { margin: 0; }
+
+        .s-One,
+        .s-Two,
+        .s-Three,
+        .s-Four,
+        .s-Five,
+        .s-Six,
+        .s-Seven,
+        .s-Eight,
+        .s-Nine,
+        .s-Ten,
+        .s-Eleven,
+        .s-Twelve,
+        .s-Thirteen,
+        .s-Fourteen,
+        .s-Fifteen,
+        .s-Sixteen,
+        .s-OneThird,
+        .s-TwoThirds  { width: 100%; }
+
+        .s-OffsetByOne,
+        .s-OffsetByTwo,
+        .s-OffsetByThree,
+        .s-OffsetByFour,
+        .s-OffsetByFive,
+        .s-OffsetBySix,
+        .s-OffsetBySeven,
+        .s-OffsetByEight,
+        .s-OffsetByNine,
+        .s-OffsetByTen,
+        .s-OffsetByEleven,
+        .s-OffsetByTwelve,
+        .s-OffsetByThirteen,
+        .s-OffsetByFourteen,
+        .s-OffsetByFifteen { padding-left: 0; }
+
+    }
+
+
+/* #Mobile (Landscape)
+================================================== */
+
+    /* Note: Design for a width of 480px */
+
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .s-Container { width: 95% }
+        .s-Column { margin: 0; }
+
+        .s-One,
+        .s-Two,
+        .s-Three,
+        .s-Four,
+        .s-Five,
+        .s-Six,
+        .s-Seven,
+        .s-Eight,
+        .s-Nine,
+        .s-Ten,
+        .s-Eleven,
+        .s-Twelve,
+        .s-Thirteen,
+        .s-Fourteen,
+        .s-Fifteen,
+        .s-Sixteen,
+        .s-OneThird,
+        .s-TwoThirds { width: 100%; }
+    }
+
+
+/* #Clearing
+================================================== */
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="Row">
+    Note: Or don't use the word clearfix at all because the word is horrible semantically.
+    Or use less/sass to extend this stylesheet instead.*/
+
+    .Clear,
+    .Group:before,
+    .Group:after,
+    .s-Clearfix:before,
+    .s-Clearfix:after,
+    .s-Container:after,
+    .s-Row:before,
+    .s-Row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+    .Group:after,
+    .s-Clearfix:after,
+    .s-Container:after,
+    .s-Row:after { clear: both; }
+    .s-Row,
+    .s-Clearfix,
+    .Group { zoom: 1; }
+
+    /* Removed .Clear here to make sure that if you want to break columns out,
+    you have a reason for doing so. (They should normally end up in a new row.) */
+
+/* #Misc
+================================================== */
+.s-FullWidth {width: 100%;}

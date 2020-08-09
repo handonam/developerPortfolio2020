@@ -7,6 +7,7 @@ import React from 'react';
  */
 import Home from './pages/Home/index.jsx';
 import Contact from './pages/Contact/index.jsx';
+import Project from './pages/Project/index.jsx';
 
 /**
  * Components
@@ -39,6 +40,7 @@ function App() {
       <MenuSystem />
       <Switch>
         <Route path="/contact" component={Contact} />
+        <Route path="/project/:projectName" component={Project} />
         <Route path="/" exact component={Home} />
       </Switch>
     </Router>

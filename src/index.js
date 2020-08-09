@@ -4,12 +4,13 @@ import 'react-app-polyfill/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './normalize.css';
-
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+import './globalStyles/normalize.css';
 import GlobalBaseStyles from './globalStyles/base.styled.js';
 import GlobalFontStyles from './globalStyles/fonts.styled.js';
+import './globalStyles/skeleton.css';
 
 ReactDOM.render(
   <React.StrictMode>

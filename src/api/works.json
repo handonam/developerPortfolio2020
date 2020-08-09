@@ -2,96 +2,108 @@
 [
   {
     "name": "TakeLessons",
+    "slugname": "takelessons",
     "statusId": 1,
     "url": "https://takelessons.com",
     "description": "A trusted online marketplace for finding qualified and vetted instructors.",
+    "responsibilityDetail": "My first job out of college landed me a Jr. Full-Stack developer job.  I was involved from conceptualization to implementation of the project whole.",
     "bgUrl": "/images/components/projects/works__bg--takelessons.jpg",
     "accomplishments": [
       {
         "title": "Public facing redesign",
-        "description": "We redesigned TakeLessons.com to help us increase our leads and conversion rates. It required us to build our own split test mechanism to throttle our traffic to the new design, monitoring conversion reports every hour. We had to move critical SEO links from this old site to maintain our organic traffic, while preventing duplicate pages on search engines.",
-        "image": {
-          "caption": "Before landing page redesign",
-          "url": "/images/components/projects/accomplishments/work__takelessons--publicredesign1.jpeg"
-        },
-        "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "Google Analytics"]
-      },
-      {
-        "title": "Public facing redesign",
-        "description": "Our research led us to certain design fundamentals including streamlined search UI, reduced clutter, strong site trustworthiness, and easier-to-understand \"How it works\" details. This required careful design and implementation using a grid system from SkeletonCSS. We also restructured the CSS from being a gigantic, 5000+ line flat file into a custom-built modular system (similar to CSS processors '@imports').",
-        "image": {
-          "caption": "After redesign",
-          "url": "/images/components/projects/accomplishments/work__takelessons--publicredesign2.jpeg"
-        },
-        "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "Google Analytics"]
-      },
-      {
-        "title": "Public facing redesign",
-        "description": "We routinely performed on-site user tests with people we've selected off of Craigslist to understand their behaviors with our old and new designs, implementing changes weekly in response to their feedback.  We also used site analytics such as Google Analytics, Clicktale, Crazy Egg, and our own reporting to draw conclusions on what features needed improvement. ",
-        "image": {
-          "caption": "Instructors' profiles, before redesign",
-          "url": "/images/components/projects/accomplishments/work__takelessons--publicredesign3.jpeg"
-        },
-        "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "Google Analytics"]
-      },
-      {
-        "title": "Public facing redesign",
-        "description": "Instructors depended on our ability to drive quality leads to them, and students depended on our ability to help them carefully select their ideal instructor. So we organized the instructors' profiles to strengthen details such as background checks, teaching availability, reviews, and location.",
-        "image": {
-          "caption": "Instructors' profiles, after redesign",
-          "url": "/images/components/projects/accomplishments/work__takelessons--publicredesign4.jpeg"
-        },
-        "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "Google Analytics"]
-      },
-      {
-        "title": "Instructors Workflow",
-        "description": "We developed an instructor work application that helped us enroll teachers into our platform quickly.",
-        "image": {
-          "caption": "Form to allow instructors to choose what they want to teach",
-          "url": "/images/components/projects/accomplishments/work__takelessons--setup1.jpeg"
-        },
-        "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "PostgreSQL"]
+        "tasks": [
+          {
+            "description": "We redesigned TakeLessons.com to help us increase our leads and conversion rates. It required us to build our own split test mechanism to throttle our traffic to the new design, monitoring conversion reports every hour. We had to move critical SEO links from this old site to maintain our organic traffic, while preventing duplicate pages on search engines.",
+            "image": {
+              "caption": "Before landing page redesign",
+              "url": "/images/components/projects/accomplishments/work__takelessons--publicredesign1.jpeg"
+            },
+            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "Google Analytics"]
+          },
+          {
+            "description": "Our research led us to certain design fundamentals including streamlined search UI, reduced clutter, strong site trustworthiness, and easier-to-understand \"How it works\" details. This required careful design and implementation using a grid system from SkeletonCSS. We also restructured the CSS from being a gigantic, 5000+ line flat file into a custom-built modular system (similar to CSS processors '@imports').",
+            "image": {
+              "caption": "After redesign",
+              "url": "/images/components/projects/accomplishments/work__takelessons--publicredesign2.jpeg"
+            },
+            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "Google Analytics"]
+          },
+          {
+            "description": "We routinely performed on-site user tests with people we've selected off of Craigslist to understand their behaviors with our old and new designs, implementing changes weekly in response to their feedback.  We also used site analytics such as Google Analytics, Clicktale, Crazy Egg, and our own reporting to draw conclusions on what features needed improvement. ",
+            "image": {
+              "caption": "Instructors' profiles, before redesign",
+              "url": "/images/components/projects/accomplishments/work__takelessons--publicredesign3.jpeg"
+            },
+            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "Google Analytics"]
+          },
+          {
+            "description": "Instructors depended on our ability to drive quality leads to them, and students depended on our ability to help them carefully select their ideal instructor. So we organized the instructors' profiles to strengthen details such as background checks, teaching availability, reviews, and location.",
+            "image": {
+              "caption": "Instructors' profiles, after redesign",
+              "url": "/images/components/projects/accomplishments/work__takelessons--publicredesign4.jpeg"
+            },
+            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "Google Analytics"]
+          }
+        ]
       },
       {
         "title": "Instructors Workflow",
-        "description": "The questions balanced between simple questions to quickly onboard new instructors and screening questions to weed out unqualified instructors.",
-        "image": {
-          "caption": "Instructor application requesting biography information",
-          "url": "/images/components/projects/accomplishments/work__takelessons--setup2.jpeg"
-        },
-        "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "PostgreSQL"]
-      },
-      {
-        "title": "Instructors Workflow",
-        "description": "The application helped our internal team understand our supply and demand between the instructor and students. It also gave instructors insight on teaching demand through a newly created metric system so they could better tailor their offerings to what the market was demanding.",
-        "image": {
-          "caption": "Instructor application with metrics on student demand.",
-          "url": "/images/components/projects/accomplishments/work__takelessons--setup3.jpeg"
-        },
-        "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "PostgreSQL"]
+        "tasks": [
+          {
+            "description": "We developed an instructor work application that helped us enroll teachers into our platform quickly.",
+            "image": {
+              "caption": "Form to allow instructors to choose what they want to teach",
+              "url": "/images/components/projects/accomplishments/work__takelessons--setup1.jpeg"
+            },
+            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "PostgreSQL"]
+          },
+          {
+            "description": "The questions balanced between simple questions to quickly onboard new instructors and screening questions to weed out unqualified instructors.",
+            "image": {
+              "caption": "Instructor application requesting biography information",
+              "url": "/images/components/projects/accomplishments/work__takelessons--setup2.jpeg"
+            },
+            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "PostgreSQL"]
+          },
+          {
+            "description": "The application helped our internal team understand our supply and demand between the instructor and students. It also gave instructors insight on teaching demand through a newly created metric system so they could better tailor their offerings to what the market was demanding.",
+            "image": {
+              "caption": "Instructor application with metrics on student demand.",
+              "url": "/images/components/projects/accomplishments/work__takelessons--setup3.jpeg"
+            },
+            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "PostgreSQL"]
+          }
+        ]
       },
       {
         "title": "Student Management System",
-        "description": "We gave instructors the tools to be able to manage their students including scheduling, contact information, pricing rates, and account holders associated to a student.",
-        "image": {
-          "caption": "Student management page",
-          "url": "/images/components/projects/accomplishments/work__takelessons--studentroster.jpeg"
-        },
-        "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "PostgreSQL"]
+        "tasks": [
+          {
+            "description": "We gave instructors the tools to be able to manage their students including scheduling, contact information, pricing rates, and account holders associated to a student.",
+            "image": {
+              "caption": "Student management page",
+              "url": "/images/components/projects/accomplishments/work__takelessons--studentroster.jpeg"
+            },
+            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "PostgreSQL"]
+          }
+        ]
       },
       {
         "title": "Gamification System",
-        "description": "An engagement system for teachers to drive user retention, allowing for them to be more actively serviceable to more leads and to their current students. I introduced AngularJS to the TakeLessons engineers and trained them through workshops.  This led to the Gamification Widget (pictured) being the first production implementation using this new technology.",
-        "image": {
-          "caption": "Gamification widget",
-          "url": "/images/components/projects/accomplishments/work__takelessons--gamification.jpeg"
-        },
-        "tech": ["AngularJs", "Symfony", "PHP", "PostgreSQL", "CSS3"]
+        "tasks": [{
+          "description": "An engagement system for teachers to drive user retention, allowing for them to be more actively serviceable to more leads and to their current students. I introduced AngularJS to the TakeLessons engineers and trained them through workshops.  This led to the Gamification Widget (pictured) being the first production implementation using this new technology.",
+          "image": {
+            "caption": "Gamification widget",
+            "url": "/images/components/projects/accomplishments/work__takelessons--gamification.jpeg"
+          },
+          "tech": ["AngularJs", "Symfony", "PHP", "PostgreSQL", "CSS3"]
+        }]
       }
     ]
   },
   {
     "name": "Pocketspace",
+    "slugname": "pocketspace",
     "statusId": 2,
     "url": "https://pocketspace.co",
     "description": "A social product-recommendation app that lets experts promote products they love and recommend.  Currently in closed-beta.",
@@ -128,6 +140,7 @@
   },
   {
     "name": "Intuit",
+    "slugname": "intuit",
     "statusId": 1,
     "url": "https://intuit.com",
     "description": "A company focused on helping with customer's financial success.",
