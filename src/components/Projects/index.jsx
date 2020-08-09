@@ -7,10 +7,9 @@ import {
   ProjectTitle,
   ProjectHeading,
   ProjectImageCarousel,
+  ProjectImageCarouselButton,
   ProjectTitleCarousel,
-  ProjectTime,
-  ProjectNavigation,
-  ProjectNav
+  ProjectTime
 } from "./index.styled.js";
 
 import {
@@ -18,50 +17,86 @@ import {
 } from 'react-router-dom';
 
 import ProjectData from "../../api/works.json";
-import ImageTL from "../../images/works/works__bg--takelessons.jpg";
-import ImagePocketspace from "../../images/works/works__bg--pocketspace.jpg";
 
 import SlideContext from './SlideContext.jsx';
+import WindowSizeContext from '../../shared/context/windowSize.jsx';
 
 const Projects = () => {
   const [activeSlide, setActiveSlide] = React.useState(0);
   
-  // currently a crude way to map images to projects
-  const ImageList = {
-    TakeLessons: ImageTL,
-    Pocketspace: ImagePocketspace
-  }
+  const slideSize = {
+    sides: .25,
+    center: .48,
+  };
   
   return (
+    // We store the active project slide in SlideContext, to be retrieved by child components below
     <SlideContext.Provider value={{
         activeSlide
       }}>
-      <ProjectsContainer>
-        <ProjectList>
-          <ProjectImageCarousel width={"400px"} height={"400px"} fromLeft={'-200px'} offset={-1}>
-            {ProjectData.map((prjct, key) => <img style={{width: 400}} src={ImageList[prjct.name]} />)}
-          </ProjectImageCarousel>
-          <ProjectImageCarousel width={"500px"} height={"500px"} >
-            {ProjectData.map((prjct, key) => <a href={`#${key}`}><img style={{width: 500}} src={ImageList[prjct.name]} /></a>)}
-          </ProjectImageCarousel>
-          <ProjectImageCarousel width={"400px"} height={"400px"} fromLeft={'calc(100% - 200px)'} offset={1}>
-            {ProjectData.map((prjct, key) => <img style={{width: 400}} src={ImageList[prjct.name]} />)}
-          </ProjectImageCarousel>
-          <ProjectTitleCarousel width={"100vw"} height={"auto"} >
-            {ProjectData.map((prjct, key) => (
-              <ProjectHeading>
-                <ProjectTitle>{prjct.name}</ProjectTitle>
-                <Link style={{width:"100vw"}}>View the Project</Link>
-              </ProjectHeading>
-            )
-          )}
-          </ProjectTitleCarousel>
-        </ProjectList>
-        <ProjectNavigation>
-          <ProjectNav left onClick={() => setActiveSlide(activeSlide - 1)} disabled={activeSlide <= 0}/>
-          <ProjectNav right onClick={() => setActiveSlide(activeSlide + 1)} disabled={activeSlide >= ProjectData.length - 1}/>
-        </ProjectNavigation>
-      </ProjectsContainer>
+      
+      {/* We also store the window size as another context to be used by child components */}
+      <WindowSizeContext.Consumer>
+      {context => (
+        <ProjectsContainer>
+          <ProjectList style={{
+            // see styled-component to see why this is being set.
+            '--data-side-width': `${context.windowSize.width * slideSize.sides}px`,
+            '--data-center-width': `${context.windowSize.width * slideSize.center}px`
+          }}>
+            <ProjectImageCarousel 
+              position={'left'}
+              width={`${context.windowSize.width * slideSize.sides}px`} 
+              height={`${context.windowSize.width * slideSize.sides}px`} 
+              offset={-1}>
+              {
+                ProjectData.map((prjct, key) => 
+                  <ProjectImageCarouselButton 
+                    direction={'left'}
+                    onClick={() => setActiveSlide(activeSlide - 1)} disabled={activeSlide <= 0}>
+                    <img style={{width: context.windowSize.width * slideSize.sides}} src={prjct.bgUrl} />
+                  </ProjectImageCarouselButton>)
+              }
+            </ProjectImageCarousel>
+            <ProjectImageCarousel 
+              position={'center'}
+              width={`${context.windowSize.width * slideSize.center}px`} 
+              height={`${context.windowSize.width * slideSize.center}px`}>
+              {
+                ProjectData.map((prjct, key) => 
+                  <a href={`#${key}`}><img style={{width: context.windowSize.width * slideSize.center}} src={prjct.bgUrl} /></a>)
+              }
+            </ProjectImageCarousel>
+            <ProjectImageCarousel 
+              position={'right'}
+              width={`${context.windowSize.width * slideSize.sides}px`} 
+              height={`${context.windowSize.width * slideSize.sides}px`} 
+              fromLeft={`calc(100% - ${context.windowSize.width * slideSize.sides/2}px)`} 
+              offset={1}>
+              {
+                ProjectData.map((prjct, key) => 
+                  <ProjectImageCarouselButton 
+                    direction={'right'}
+                    onClick={() => setActiveSlide(activeSlide + 1)} disabled={activeSlide >= ProjectData.length - 1}>
+                    <img style={{width: context.windowSize.width * slideSize.sides}} src={prjct.bgUrl} />
+                  </ProjectImageCarouselButton>)
+              }
+            </ProjectImageCarousel>
+            <ProjectTitleCarousel 
+              width={"100vw"} height={"auto"} >
+              {
+                ProjectData.map((prjct, key) => (
+                  <ProjectHeading>
+                  <ProjectTitle>{prjct.name}</ProjectTitle>
+                  <Link style={{width:"100vw"}}>View the Project</Link>
+                  </ProjectHeading>
+                )
+              )}
+            </ProjectTitleCarousel>
+          </ProjectList>
+        </ProjectsContainer>
+      )}
+      </WindowSizeContext.Consumer>
     </SlideContext.Provider>
   )
 }

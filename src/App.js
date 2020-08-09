@@ -8,9 +8,21 @@ import React from 'react';
 import Home from './pages/Home/index.jsx';
 import Contact from './pages/Contact/index.jsx';
 
+/**
+ * Components
+ */
 import MenuSystem from './components/Menu';
 
+/**
+ * Hooks
+ */
+import useWindowSize from './shared/hooks/windowSize.jsx';
 
+/**
+ * Contexts
+ */
+import WindowSizeContext from './shared/context/windowSize.jsx';
+ 
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,14 +31,18 @@ import {
 
 
 function App() {
+  const windowSize = useWindowSize();
+  
   return (
+    <WindowSizeContext.Provider value={{windowSize}}>
     <Router>
       <MenuSystem />
       <Switch>
         <Route path="/contact" component={Contact} />
-        <Route path="/" component={Home} />
+        <Route path="/" exact component={Home} />
       </Switch>
     </Router>
+    </WindowSizeContext.Provider>
   );
 }
 
