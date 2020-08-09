@@ -13,11 +13,11 @@ import Project from './pages/Project/index.jsx';
  * Components
  */
 import MenuSystem from './components/Menu';
-
 /**
  * Hooks
  */
 import useWindowSize from './shared/hooks/windowSize.jsx';
+import ScrollToTop from './shared/hooks/scrollToTop.js';
 
 /**
  * Contexts
@@ -37,6 +37,7 @@ function App() {
   return (
     <WindowSizeContext.Provider value={{windowSize}}>
     <Router>
+      <ScrollToTop />
       <MenuSystem />
       <Switch>
         <Route path="/contact" component={Contact} />

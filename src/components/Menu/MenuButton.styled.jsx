@@ -5,7 +5,17 @@ export const MenuButtonContainer = styled.button`
   height: 70px;
   width: 80px;
   position: fixed;
-  top: 8rem;
-  left: 0;
-  z-index: 11;
+  bottom: 0;
+  left: 2rem;
+  z-index: 21;
+  background-color: ${COLORS.BRAND_PRIMARY};
+  border: none;
+  outline: none;
+  color: ${COLORS.GRAY5};
+  
+  @media (min-width: 768px) {
+    left: 0;
+    bottom: initial;
+    top: 2rem;
+  }
 `;
