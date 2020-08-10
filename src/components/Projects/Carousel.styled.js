@@ -36,7 +36,8 @@ export const CarouselStrip = styled.div.attrs(props => ({
           * (${props.slideNumber + props.offset})
           * -1), 0, 0)`,
       // calculate the total width so we don't flex wrap any items.
-      width: `calc(${props.windowWidth} * ${props.children.length})`
+      width: `calc(${props.windowWidth} * ${props.children.length})`,
+      height: props.windowHeight
     }
   }))`
 
