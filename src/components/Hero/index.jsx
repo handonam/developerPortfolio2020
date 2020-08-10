@@ -32,7 +32,7 @@ const Hero = () => {
              >
               <HeroHeadingP>
                 Front-End Developer <br />
-                From San Diego, CA
+                from San Diego, CA
               </HeroHeadingP>
             </Parallax>
             <Parallax y={[200, 0]}>

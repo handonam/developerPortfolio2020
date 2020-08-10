@@ -40,7 +40,7 @@ export const HeroHeadingP = styled.p`
   letter-spacing: .15rem;
   
   @media (min-width: 768px) {
-    letter-spacing: .75rem;
+    letter-spacing: .5rem;
   }
 `
 

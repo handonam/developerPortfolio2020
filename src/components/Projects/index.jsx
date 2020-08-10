@@ -7,7 +7,6 @@ import {
 import {
   ProjectsContainer,
   ProjectList,
-  Project,
   ProjectTitle,
   ProjectHeading,
   ProjectImageCarousel,
@@ -29,8 +28,8 @@ const Projects = () => {
   const [activeSlide, setActiveSlide] = React.useState(0);
   
   const slideSize = {
-    sides: .25,
-    center: .48,
+    sides: .45,
+    center: .55,
   };
   
   return (
@@ -41,63 +40,93 @@ const Projects = () => {
       
       {/* We also store the window size as another context to be used by child components */}
       <WindowSizeContext.Consumer>
-      {context => (
-        <ProjectsContainer style={{
-          // see styled-component to see why this is being set.
-          '--data-side-width': `${context.windowSize.width * slideSize.sides}px`,
-          '--data-center-width': `${context.windowSize.width * slideSize.center}px`
-        }}>
-          <ProjectList>
-            <ProjectImageCarouselButton 
-              position={'left'}
-              onClick={() => setActiveSlide(activeSlide - 1)} disabled={activeSlide <= 0}>
-              <ProjectImageCarousel 
-                width={`${context.windowSize.width * slideSize.sides}px`} 
-                height={`${context.windowSize.width * slideSize.sides}px`} 
-                offset={-1}>
+      {context => {
+        const widthSides = `${context.windowSize.width * slideSize.sides}px`;
+        const widthCenter = `${context.windowSize.width * slideSize.center}px`;
+        
+        return (
+          <ProjectsContainer style={{
+            // see styled-component to see why this is being set for performance reasons
+            '--data-side-width': widthSides,
+            '--data-center-width': widthCenter
+          }}>
+            <ProjectList>
+            
+              {/**
+                * The 3 image carousel controls that cycle through the projects.
+                *
+                * The "Sides" control the navigation. The "Center" opens the project.
+                *
+                * We take the viewport sizes (from window resize) to feed into the carousel.
+                */}
+              <ProjectImageCarouselButton 
+                position={'left'}
+                onClick={() => setActiveSlide(activeSlide - 1)} 
+                disabled={activeSlide <= 0}>
+                <ProjectImageCarousel 
+                  width={widthSides} 
+                  height={widthSides} 
+                  offset={-1}>
+                  {
+                    ProjectData.map((prjct, key) => 
+                      <img style={{width: widthSides}} src={prjct.bgUrl} />
+                    )
+                  }
+                </ProjectImageCarousel>
+              </ProjectImageCarouselButton>
+              
+              <ProjectImageCarousel
+                isCenter={true}
+                width={widthCenter} 
+                height={widthCenter}>
                 {
                   ProjectData.map((prjct, key) => 
-                      <img style={{width: context.windowSize.width * slideSize.sides}} src={prjct.bgUrl} />)
+                    <Link to={`/project/${prjct.slugname}`}>
+                      <img style={{width: widthCenter}} src={prjct.bgUrl} />
+                    </Link>
+                  )
                 }
               </ProjectImageCarousel>
-            </ProjectImageCarouselButton>
-            <ProjectImageCarousel
-              isCenter={true}
-              width={`${context.windowSize.width * slideSize.center}px`} 
-              height={`${context.windowSize.width * slideSize.center}px`}>
-              {
-                ProjectData.map((prjct, key) => 
-                  <Link to={`/project/${prjct.slugname}`}><img style={{width: context.windowSize.width * slideSize.center}} src={prjct.bgUrl} /></Link>)
-              }
-            </ProjectImageCarousel>
-            <ProjectImageCarouselButton 
-              position={'right'}
-              onClick={() => setActiveSlide(activeSlide + 1)} disabled={activeSlide >= ProjectData.length - 1}>
-              <ProjectImageCarousel 
-                width={`${context.windowSize.width * slideSize.sides}px`} 
-                height={`${context.windowSize.width * slideSize.sides}px`} 
-                fromLeft={`calc(100% - ${context.windowSize.width * slideSize.sides/2}px)`} 
-                offset={1}>
+              
+              <ProjectImageCarouselButton 
+                position={'right'}
+                onClick={() => setActiveSlide(activeSlide + 1)} 
+                disabled={activeSlide >= ProjectData.length - 1}>
+                <ProjectImageCarousel 
+                  width={widthSides} 
+                  height={widthSides} 
+                  fromLeft={`calc(100% - ${widthSides/2})`} 
+                  offset={1}>
+                  {
+                    ProjectData.map((prjct, key) => 
+                      <img style={{width: widthSides}} src={prjct.bgUrl} />
+                    )
+                  }
+                </ProjectImageCarousel>
+              </ProjectImageCarouselButton>
+              
+              
+              {/**
+                * Title Carousel.
+                *
+                * This functions as a full-width carousel, with the titles scrolling through.
+                * Uses the same mechanism under the hood as ProjectImageCarousel
+                */}
+              <ProjectTitleCarousel 
+                width={"100vw"} height={"auto"} >
                 {
-                  ProjectData.map((prjct, key) => 
-                      <img style={{width: context.windowSize.width * slideSize.sides}} src={prjct.bgUrl} />)
+                  ProjectData.map((prjct, key) => (
+                    <ProjectHeading>
+                      <ProjectTitle>{prjct.name}</ProjectTitle>
+                      <ViewProjectLink to={`/project/${prjct.slugname}`}>View this project ></ViewProjectLink>
+                    </ProjectHeading>
+                  ))
                 }
-              </ProjectImageCarousel>
-            </ProjectImageCarouselButton>
-            <ProjectTitleCarousel 
-              width={"100vw"} height={"auto"} >
-              {
-                ProjectData.map((prjct, key) => (
-                  <ProjectHeading>
-                    <ProjectTitle>{prjct.name}</ProjectTitle>
-                    <ViewProjectLink to={`/project/${prjct.slugname}`}>View this project ></ViewProjectLink>
-                  </ProjectHeading>
-                )
-              )}
-            </ProjectTitleCarousel>
-          </ProjectList>
-        </ProjectsContainer>
-      )}
+              </ProjectTitleCarousel>
+            </ProjectList>
+          </ProjectsContainer>
+        );
+      }}
       </WindowSizeContext.Consumer>
     </SlideContext.Provider>
   )
