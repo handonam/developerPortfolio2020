@@ -4,6 +4,10 @@ export default createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+  
+  figure {
+    margin: 0;
+  }
 
   html,
   body {
