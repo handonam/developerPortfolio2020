@@ -181,8 +181,4 @@ export const ViewProjectLink = styled(Link)`
   @media (min-width: 768px) {
     font-size: 2rem;
   }
-`
-
-export const ProjectTime = styled.div`
-  color: ${COLORS.GRAY6};
 `;

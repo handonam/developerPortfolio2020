@@ -6,6 +6,7 @@ import ParallaxCache from '../../shared/hooks/parallaxCache.jsx';
 
 import Hero from "../../components/Hero/index.jsx";
 import Projects from "../../components/Projects/index.jsx";
+import ContactSection from '../../components/ContactSection/index.jsx';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <ParallaxCache />
       <Hero />
       <Projects />
+      <ContactSection />
     </>
   );
 }

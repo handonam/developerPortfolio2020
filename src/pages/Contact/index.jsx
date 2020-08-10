@@ -4,13 +4,13 @@ import React from 'react';
 // (https://www.npmjs.com/package/react-scroll-parallax#example-usage-of-context)
 import ParallaxCache from '../../shared/hooks/parallaxCache.jsx';
 
+import ContactSection from '../../components/ContactSection/index.jsx';
+
 const Contact = () => {
   return (
     <>
       <ParallaxCache />
-      <section>
-        There's nothing here yet! But that's coming soon!
-      </section>
+      <ContactSection />
     </>
   );
 }

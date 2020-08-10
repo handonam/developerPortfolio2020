@@ -12,8 +12,7 @@ import {
   ProjectImageCarousel,
   ProjectImageCarouselButton,
   ProjectTitleCarousel,
-  ViewProjectLink,
-  ProjectTime
+  ViewProjectLink
 } from "./index.styled.js";
 
 /**
@@ -41,8 +40,8 @@ const Projects = () => {
       {/* We also store the window size as another context to be used by child components */}
       <WindowSizeContext.Consumer>
       {context => {
-        const widthSides = `${context.windowSize.width * slideSize.sides}px`;
-        const widthCenter = `${context.windowSize.width * slideSize.center}px`;
+        const widthSides = `${Math.min(context.windowSize.width, Math.min(context.windowSize.height, 1080)) * slideSize.sides}px`;
+        const widthCenter = `${Math.min(context.windowSize.width, Math.min(context.windowSize.height, 1080)) * slideSize.center}px`;
         
         return (
           <ProjectsContainer style={{
