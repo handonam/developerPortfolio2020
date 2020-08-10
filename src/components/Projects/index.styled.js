@@ -9,22 +9,12 @@ export const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: ${COLORS.GRAY3};
+  background-color: ${COLORS.GRAY1};
   min-height: 100vh;
   height: calc(10rem + var(--data-center-width));
   padding-bottom: 10rem;
   position: relative;
   overflow-x: hidden;
-  &:before {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, .60);
-  }
 `;
 export const ProjectList = styled.div`
   height: 100%;

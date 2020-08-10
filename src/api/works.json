@@ -8,6 +8,9 @@
     "description": "A trusted online marketplace for finding qualified and vetted instructors.",
     "responsibilityDetail": "My first job out of college landed me a Jr. Full-Stack developer job.  I was involved from conceptualization to implementation of the project whole.",
     "bgUrl": "/images/components/projects/works__bg--takelessons.jpg",
+    "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "AngularJS", "PostgreSQL", "Google Analytics"],
+    "period": "June 2011 - August 2015",
+    "role": "Full-Stack Developer I, Full-Stack Developer II (2014)",
     "accomplishments": [
       {
         "title": "Public facing redesign",
@@ -17,32 +20,28 @@
             "image": {
               "caption": "Before landing page redesign",
               "url": "/images/components/projects/accomplishments/work__takelessons--publicredesign1.jpeg"
-            },
-            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "Google Analytics"]
+            }
           },
           {
             "description": "Our research led us to certain design fundamentals including streamlined search UI, reduced clutter, strong site trustworthiness, and easier-to-understand \"How it works\" details. This required careful design and implementation using a grid system from SkeletonCSS. We also restructured the CSS from being a gigantic, 5000+ line flat file into a custom-built modular system (similar to CSS processors '@imports').",
             "image": {
               "caption": "After redesign",
               "url": "/images/components/projects/accomplishments/work__takelessons--publicredesign2.jpeg"
-            },
-            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "Google Analytics"]
+            }
           },
           {
             "description": "We routinely performed on-site user tests with people we've selected off of Craigslist to understand their behaviors with our old and new designs, implementing changes weekly in response to their feedback.  We also used site analytics such as Google Analytics, Clicktale, Crazy Egg, and our own reporting to draw conclusions on what features needed improvement. ",
             "image": {
               "caption": "Instructors' profiles, before redesign",
               "url": "/images/components/projects/accomplishments/work__takelessons--publicredesign3.jpeg"
-            },
-            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "Google Analytics"]
+            }
           },
           {
             "description": "Instructors depended on our ability to drive quality leads to them, and students depended on our ability to help them carefully select their ideal instructor. So we organized the instructors' profiles to strengthen details such as background checks, teaching availability, reviews, and location.",
             "image": {
               "caption": "Instructors' profiles, after redesign",
               "url": "/images/components/projects/accomplishments/work__takelessons--publicredesign4.jpeg"
-            },
-            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "Google Analytics"]
+            }
           }
         ]
       },
@@ -54,24 +53,21 @@
             "image": {
               "caption": "Form to allow instructors to choose what they want to teach",
               "url": "/images/components/projects/accomplishments/work__takelessons--setup1.jpeg"
-            },
-            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "PostgreSQL"]
+            }
           },
           {
             "description": "The questions balanced between simple questions to quickly onboard new instructors and screening questions to weed out unqualified instructors.",
             "image": {
               "caption": "Instructor application requesting biography information",
               "url": "/images/components/projects/accomplishments/work__takelessons--setup2.jpeg"
-            },
-            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "PostgreSQL"]
+            }
           },
           {
             "description": "The application helped our internal team understand our supply and demand between the instructor and students. It also gave instructors insight on teaching demand through a newly created metric system so they could better tailor their offerings to what the market was demanding.",
             "image": {
               "caption": "Instructor application with metrics on student demand.",
               "url": "/images/components/projects/accomplishments/work__takelessons--setup3.jpeg"
-            },
-            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "PostgreSQL"]
+            }
           }
         ]
       },
@@ -83,20 +79,18 @@
             "image": {
               "caption": "Student management page",
               "url": "/images/components/projects/accomplishments/work__takelessons--studentroster.jpeg"
-            },
-            "tech": ["CSS3", "HTML5", "jQuery", "Symfony", "PHP", "PostgreSQL"]
+            }
           }
         ]
       },
       {
         "title": "Gamification System",
         "tasks": [{
-          "description": "An engagement system for teachers to drive user retention, allowing for them to be more actively serviceable to more leads and to their current students. I introduced AngularJS to the TakeLessons engineers and trained them through workshops.  This led to the Gamification Widget (pictured) being the first production implementation using this new technology.",
+          "description": "An engagement system for teachers to drive user retention, allowing for them to be more actively serviceable to more leads and to their current students. <strong>I introduced AngularJS to the TakeLessons engineers and trained them through workshops</strong>.  This led to the Gamification Widget (pictured) being the first production implementation using this new technology.",
           "image": {
             "caption": "Gamification widget",
             "url": "/images/components/projects/accomplishments/work__takelessons--gamification.jpeg"
-          },
-          "tech": ["AngularJs", "Symfony", "PHP", "PostgreSQL", "CSS3"]
+          }
         }]
       }
     ]
@@ -108,6 +102,10 @@
     "url": "https://pocketspace.co",
     "description": "A social product-recommendation app that lets experts promote products they love and recommend.  Currently offline.",
     "bgUrl": "/images/components/projects/works__bg--pocketspace.jpg",
+    "responsibilityDetail": "This started out as a project idea with a friend, which led to a rabbit-hole of fun development. It allowed us to showcase our ability to build a web application with modern technologies of the time, and to do a lot of market and user research to understand every facet of building a bootstrapped product.",
+    "tech": ["NodeJS", "ExpressJS", "AngularJS", "SASS", "AWS", "PostgreSQL", "MongoDB", "PassportJS", "SysAdmin/SSL-Cert", "KnexJS/BookshelfJS"],
+    "period": "October 2014 - August 2016",
+    "role": "Co-Founder, Technical Lead",
     "accomplishments": [
       {
         "title": "Product Pockets",
@@ -116,8 +114,7 @@
           "image": {
             "caption": "Collection of products that a person uses",
             "url": "/images/components/projects/accomplishments/work__pocketspace--profile.jpeg"
-          },
-          "tech": ["NodeJS", "ExpressJS", "AngularJS", "SASS", "AWS", "PostgreSQL"]
+          }
         }]
       },
       {
@@ -127,8 +124,7 @@
           "image": {
             "caption": "User signup, including twitter login",
             "url": "/images/components/projects/accomplishments/work__pocketspace--accountLogin.jpeg"
-          },
-          "tech": ["NodeJS", "ExpressJS", "PostgreSQL", "MongoDB", "SSL/HTTPS", "PassportJS", "RESTful"]
+          }
         }]
       },
       {
@@ -138,8 +134,7 @@
           "image": {
             "caption": "Product edit form",
             "url": "/images/components/projects/accomplishments/work__pocketspace--productAdd.jpeg"
-          },
-          "tech": ["NodeJS", "ExpressJS", "PostgreSQL", "AngularJS", "RESTful", "KnexJS/BookshelfJS", "Lodash"]
+          }
         }]
       }
     ]
@@ -150,18 +145,49 @@
     "statusId": 1,
     "url": "https://intuit.com",
     "description": "A company focused on helping with customer's financial success.",
+    "responsibilityDetail": "I joined the TurboTax marketing team to create in-product upselling experiences to customers in an effort to increase conversions to our premium offerings.",
     "bgUrl": "/images/components/projects/works__bg--turbotax.jpg",
+    "tech": ["NodeJS", "ReactJS", "BackboneJS", "Handlebars", "SCSS", "BEMCSS", "AppShell"],
+    "period": "April 2016 - August 2019",
+    "role": "Front-end Developer",
     "accomplishments": [
       {
-        "title": "TurboTax Comparison Chart",
-        "tasks": [{
-          "description": "I helped create a chart that helps customers choose the right tax filing product based on their situation.",
-          "image": {
-            "caption": "The TurboTax Product Comparison chart",
-            "url": "/images/components/projects/accomplishments/work__turbotax--chart.jpeg"
+        "title": "TurboTax Product Selector Chart",
+        "tasks": [
+          {
+            "description": "<strong>We maintained a highly-complex chart</strong> that helps new/returning customers start with right tax filing product based on their situation. <br/><br/> The chart was <strong>originally built in BackboneJS/Handlebars/jQuery</strong>, where it was <em>very difficult to update and maintain</em>. <br/><br/><strong>I devised a strategy with the team using ReactJS</strong> by breaking down each product&rsquo;s detail like a cell on a spreadsheet, and delegating team members to work on each &ldquo;cell&rdquo; to increase concurrency of development. <br/><br/><strong>The result was increased maintainability, reusability, and experimentality</strong> of the chart as a whole, as well as the components themselves (such as buttons or user ratings).",
+            "image": {
+              "caption": "The TurboTax Product Comparison chart",
+              "url": "/images/components/projects/accomplishments/work__intuit--skuSelector.png"
+            }
           },
-          "tech": ["NodeJS", "BackboneJS", "SCSS", "BEMCSS", "AppShell"]
-        }]
+          {
+            "description": "<strong>The upgrade allowed us to conduct many more variant A/B tests</strong>. We implmented a home-brewed user metrics tracking system (down to each user click and path through the UX flow) to allow data analysts to craft very detailed test strategies.",
+            "image": {
+              "caption": "The TurboTax Product Comparison chart, close-up",
+              "url": "/images/components/projects/accomplishments/work__intuit--skuSelectorSelected--cropped.png"
+            }
+          }
+        ]
+      },
+      {
+        "title": "In-Product Upsell",
+        "tasks": [
+          {
+            "description": "We also targeted all customers (new and returning) that go through our Free Edition workflow to explore the many other benefits of upgrading. <br/><br/>Charts like these were <strong>built in ReactJS</strong> and each part of this chart was then recomposed/repurposed to create more variations.",
+            "image": {
+              "caption": "The TurboTax Product Comparison chart",
+              "url": "/images/components/projects/accomplishments/work__intuit--postPI.png"
+            }
+          },
+          {
+            "description": "We also added points in the user flow that required them to upgrade their product to unlock certain features. <strong>I helped to create 35+ of these &ldquo;Required Upgrade&rdquo; screens</strong>, driven by a configuration file, with each screen running multiple A/B test experiments.",
+            "image": {
+              "caption": "The TurboTax Product Comparison chart, close-up",
+              "url": "/images/components/projects/accomplishments/work__intuit--reqUpg.jpg"
+            }
+          }
+        ]
       }
     ]
   }

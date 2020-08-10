@@ -1,4 +1,5 @@
 import React from 'react';
+import dompurify from 'dompurify';
 
 import {
   Link
@@ -19,6 +20,8 @@ import {
 
 
 const ProjectDetail = (props) => {
+  const sanitizer = dompurify.sanitize;
+
   return (
     <ProjectDetailContainer>
       <Title>{props.project.name}</Title>
@@ -28,13 +31,12 @@ const ProjectDetail = (props) => {
           <ProjectImage src={props.project.bgUrl} alt={props.project.name} />
         </ImageContainer>
         <DetailsText>
-          <ResonsibilitiesText>
-            {props.project.responsibilityDetail}
-          </ResonsibilitiesText>
+          <ResonsibilitiesText
+          dangerouslySetInnerHTML={{__html: sanitizer(props.project.responsibilityDetail)}} />
           <DetailsUL>
-            <DetailsLI>Role</DetailsLI>
-            <DetailsLI>Technologies</DetailsLI>
-            <DetailsLI>Period</DetailsLI>
+            <DetailsLI data-label="Role">{props.project.role}</DetailsLI>
+            <DetailsLI data-label="Technologies">{props.project.tech.join(', ')}</DetailsLI>
+            <DetailsLI data-label="Period">{props.project.period}</DetailsLI>
           </DetailsUL>
         </DetailsText>
       </DetailsContainer>

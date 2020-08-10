@@ -1,4 +1,5 @@
 import React from 'react';
+import dompurify from 'dompurify';
 
 import {
   AccomplishmentContainer,
@@ -12,6 +13,9 @@ import {
 } from "./Accomplishments.styled.js";
 
 const Accomplishments = (props) => {
+  // You can never be too safe!
+  const sanitizer = dompurify.sanitize;
+
   return (
     <AccomplishmentContainer>
     <header class="s-Container">
@@ -25,7 +29,8 @@ const Accomplishments = (props) => {
           {
             accomplishment.tasks.map(task => (
               <TaskSection>
-                <TaskDescription>{task.description}</TaskDescription>
+                <TaskDescription
+                  dangerouslySetInnerHTML={{__html: sanitizer(task.description)}} />
                 <TaskImageContainer>
                   <TaskImage src={task.image.url} alt={task.image.caption} />
                 </TaskImageContainer>

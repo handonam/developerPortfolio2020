@@ -31,6 +31,7 @@ export const HeroHR = styled.div`
   margin-left: auto;
   margin-right: auto;
 `;
+
 export const HeroHeadingP = styled.p`
   font-family: 'Libre Franklin';
   font-weight: 300;
@@ -41,7 +42,6 @@ export const HeroHeadingP = styled.p`
   @media (min-width: 768px) {
     letter-spacing: .75rem;
   }
-  
 `
 
 export const ProjectsIntroArrow = styled.div`

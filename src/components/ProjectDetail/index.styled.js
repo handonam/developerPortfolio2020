@@ -65,7 +65,7 @@ export const DetailsText = styled.div.attrs({
 
 export const ResonsibilitiesText = styled.p`
   font-size: 1.33333rem;
-  line-height: 1.66666;
+  line-height: 1.5;
   font-weight: 200;
   margin-top: 0;
 `;
@@ -74,4 +74,12 @@ export const DetailsUL = styled.div`
 `;
 
 export const DetailsLI = styled.div`
+  :before {
+    content: attr(data-label);
+    font-weight: 500;
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: .25rem;
+  }
+  margin-bottom: 1em;
 `;

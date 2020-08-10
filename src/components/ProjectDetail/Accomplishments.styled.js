@@ -63,6 +63,10 @@ export const TaskDescription = styled.p`
   font-weight: 200;
   margin-top: 0;
   
+  strong {
+    font-weight: 500;
+  }
+  
   @media (min-width: 768px) {
     font-size: 1.25rem;
     margin-right: 2rem;

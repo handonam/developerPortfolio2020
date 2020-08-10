@@ -11,12 +11,15 @@ import './globalStyles/normalize.css';
 import GlobalBaseStyles from './globalStyles/base.styled.js';
 import GlobalFontStyles from './globalStyles/fonts.styled.js';
 import './globalStyles/skeleton.css';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalBaseStyles />
     <GlobalFontStyles />
-    <App />
+    <ParallaxProvider>
+      <App />
+    </ParallaxProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
