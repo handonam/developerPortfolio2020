@@ -87,13 +87,13 @@ export const ProjectImageCarouselButton = styled.button`
   * Decorate symbols
   */
   &:after {
-    content: '${props => props.position === 'left' ? '<' :'>'}';
+    content: '${props => props.disabled ? '' : (props.position === 'left' ? '<' :'>')}';
     z-index: 2;
     color: ${COLORS.WHITE};
     font-weight: 700;
     position: absolute;
     top: 50%;
-    ${props => props.position === 'left' ? 'right: 10px;' : 'left: 10px;'}
+    ${props => props.position === 'left' ? 'right: 20px;' : 'left: 20px;'}
   }
 `;
 

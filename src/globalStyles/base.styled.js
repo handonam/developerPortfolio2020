@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export default createGlobalStyle`
   * {
     box-sizing: border-box;
+    touch-action: pan-x pan-y;
   }
   
   figure {

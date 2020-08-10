@@ -68,7 +68,7 @@ const Projects = () => {
                   offset={-1}>
                   {
                     ProjectData.map((prjct, key) => 
-                      <img style={{width: widthSides}} src={prjct.bgUrl} />
+                      <img style={{width: widthSides, height: widthSides}} src={prjct.bgUrl} />
                     )
                   }
                 </ProjectImageCarousel>
@@ -81,7 +81,7 @@ const Projects = () => {
                 {
                   ProjectData.map((prjct, key) => 
                     <Link to={`/project/${prjct.slugname}`}>
-                      <img style={{width: widthCenter}} src={prjct.bgUrl} />
+                      <img style={{width: widthCenter, height: widthCenter}} src={prjct.bgUrl} />
                     </Link>
                   )
                 }
@@ -98,7 +98,7 @@ const Projects = () => {
                   offset={1}>
                   {
                     ProjectData.map((prjct, key) => 
-                      <img style={{width: widthSides}} src={prjct.bgUrl} />
+                      <img style={{width: widthSides, height: widthSides}} src={prjct.bgUrl} />
                     )
                   }
                 </ProjectImageCarousel>

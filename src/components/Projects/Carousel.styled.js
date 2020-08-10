@@ -43,5 +43,5 @@ export const CarouselStrip = styled.div.attrs(props => ({
 
   display: flex;
   flex-direction: row;
-  transition: transform 1s;
+  transition: transform .5s;
 `;
