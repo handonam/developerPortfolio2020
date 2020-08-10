@@ -16,6 +16,7 @@ import {
   DetailsContainer,
   DetailsUL,
   DetailsLI,
+  LinkButton,
 } from "./index.styled.js";
 
 
@@ -38,6 +39,7 @@ const ProjectDetail = (props) => {
             <DetailsLI data-label="Technologies">{props.project.tech.join(', ')}</DetailsLI>
             <DetailsLI data-label="Period">{props.project.period}</DetailsLI>
           </DetailsUL>
+          <LinkButton to="/">Go Back</LinkButton>
         </DetailsText>
       </DetailsContainer>
     </ProjectDetailContainer>

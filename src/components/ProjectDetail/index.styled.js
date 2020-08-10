@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {COLORS, SHADOWS} from '../../shared/colors.js'
+import {Link} from 'react-router-dom';
 
 export const ProjectDetailContainer = styled.div`
   background-color: ${COLORS.GRAY1};
@@ -82,4 +83,19 @@ export const DetailsLI = styled.div`
     margin-bottom: .25rem;
   }
   margin-bottom: 1em;
+`;
+
+export const LinkButton = styled(Link)`
+  background-color: transparent;
+  border: 1px solid ${COLORS.GRAY6};
+  border-radius: 5px;
+  padding: .5rem 2rem;
+  color: ${COLORS.GRAY6};
+  float: right;
+  text-decoration: none;
+  transition: color .15s, border-color .15s;
+  &:hover {
+    border-color: ${COLORS.BRAND_PRIMARY};
+    color: ${COLORS.BRAND_PRIMARY};
+  }
 `;
